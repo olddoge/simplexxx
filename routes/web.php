@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Main;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::any('/', [Main::class, 'index']);
+
+Route::any('/welcome', function () {
     return view('welcome');
 });
