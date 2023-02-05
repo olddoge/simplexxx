@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <title>layuimini-iframe版 v2 - 基于Layui的后台管理系统前端模板</title>
@@ -40,7 +40,7 @@
             <!--手机端头部菜单-->
             <ul class="layui-nav layui-layout-left layuimini-header-menu layuimini-mobile-show">
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="fa fa-list-ul"></i> 选择模块</a>
+                    <a href="javascript:"><i class="fa fa-list-ul"></i> 选择模块</a>
                     <dl class="layui-nav-child layuimini-menu-header-mobile">
                     </dl>
                 </li>
@@ -49,35 +49,35 @@
             <ul class="layui-nav layui-layout-right">
 
                 <li class="layui-nav-item" lay-unselect>
-                    <a href="javascript:;" data-refresh="刷新"><i class="fa fa-refresh"></i></a>
+                    <a href="javascript:" data-refresh="刷新"><i class="fa fa-refresh"></i></a>
                 </li>
                 <li class="layui-nav-item" lay-unselect>
-                    <a href="javascript:;" data-clear="清理" class="layuimini-clear"><i class="fa fa-trash-o"></i></a>
+                    <a href="javascript:" data-clear="清理" class="layuimini-clear"><i class="fa fa-trash-o"></i></a>
                 </li>
                 <li class="layui-nav-item mobile layui-hide-xs" lay-unselect>
-                    <a href="javascript:;" data-check-screen="full"><i class="fa fa-arrows-alt"></i></a>
+                    <a href="javascript:" data-check-screen="full"><i class="fa fa-arrows-alt"></i></a>
                 </li>
                 <li class="layui-nav-item layuimini-setting">
-                    <a href="javascript:;">admin</a>
+                    <a href="javascript:">admin</a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料"
+                            <a href="javascript:" layuimini-content-href="page/user-setting.html" data-title="基本资料"
                                data-icon="fa fa-gears">基本资料<span class="layui-badge-dot"></span></a>
                         </dd>
                         <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码"
+                            <a href="javascript:" layuimini-content-href="page/user-password.html" data-title="修改密码"
                                data-icon="fa fa-gears">修改密码</a>
                         </dd>
                         <dd>
                             <hr>
                         </dd>
                         <dd>
-                            <a href="javascript:;" class="login-out">退出登录</a>
+                            <a href="javascript:" class="login-out">退出登录</a>
                         </dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item layuimini-select-bgcolor" lay-unselect>
-                    <a href="javascript:;" data-bgcolor="配色方案"><i class="fa fa-ellipsis-v"></i></a>
+                    <a href="javascript:" data-bgcolor="配色方案"><i class="fa fa-ellipsis-v"></i></a>
                 </li>
             </ul>
         </div>
@@ -112,11 +112,11 @@
                 <li class="layui-tab-tool layui-icon layui-icon-down">
                     <ul class="layui-nav close-box">
                         <li class="layui-nav-item">
-                            <a href="javascript:;"><span class="layui-nav-more"></span></a>
+                            <a href="javascript:"><span class="layui-nav-more"></span></a>
                             <dl class="layui-nav-child">
-                                <dd><a href="javascript:;" layuimini-tab-close="current">关 闭 当 前</a></dd>
-                                <dd><a href="javascript:;" layuimini-tab-close="other">关 闭 其 他</a></dd>
-                                <dd><a href="javascript:;" layuimini-tab-close="all">关 闭 全 部</a></dd>
+                                <dd><a href="javascript:" layuimini-tab-close="current">关 闭 当 前</a></dd>
+                                <dd><a href="javascript:" layuimini-tab-close="other">关 闭 其 他</a></dd>
+                                <dd><a href="javascript:" layuimini-tab-close="all">关 闭 全 部</a></dd>
                             </dl>
                         </li>
                     </ul>
@@ -133,12 +133,12 @@
 <script src="{{ asset('js/lay-config.js') }}" charset="utf-8"></script>
 <script>
     layui.use(['jquery', 'layer', 'miniAdmin', 'miniTongji'], function () {
-        var $ = layui.jquery,
+        let $ = layui.jquery,
             layer = layui.layer,
             miniAdmin = layui.miniAdmin,
             miniTongji = layui.miniTongji;
 
-        var options = {
+        let options = {
             iniUrl: "/api/init",    // 初始化接口
             clearUrl: "api/clear", // 缓存清理接口
             urlHashLocation: true,      // 是否打开hash定位

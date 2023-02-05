@@ -23,6 +23,20 @@ Route::any('init', function () {
     return response()->json($data);
 });
 
+Route::any('table', function () {
+    $data = [
+        ['name' => '复仇者联盟(Avengers)', 'release_date' => date('Y年m月d日')],
+        ['name' => 'test1', 'release_date' => date('2022年m月d日')],
+    ];
+//    $data = [];
+    $data = [
+        'code' => 0,
+        'data' => $data,
+        'count' => 50
+    ];
+    return response()->json($data);
+});
+
 Route::any('clear', function () {
     return response()->json(['code' => 1, 'msg' => '成功']);
 });

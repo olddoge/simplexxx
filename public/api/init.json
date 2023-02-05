@@ -16,27 +16,21 @@
             "target": "_self",
             "child": [
                 {
-                    "title": "主页模板",
+                    "title": "刮削信息",
                     "href": "",
-                    "icon": "fa fa-home",
+                    "icon": "fa fa-magnet",
                     "target": "_self",
                     "child": [
                         {
-                            "title": "主页一",
-                            "href": "page/welcome-1.html",
-                            "icon": "fa fa-tachometer",
+                            "title": "电影",
+                            "href": "scrape/movie",
+                            "icon": "fa fa-film",
                             "target": "_self"
                         },
                         {
-                            "title": "主页二",
+                            "title": "电视剧",
                             "href": "page/welcome-2.html",
-                            "icon": "fa fa-tachometer",
-                            "target": "_self"
-                        },
-                        {
-                            "title": "主页三",
-                            "href": "page/welcome-3.html",
-                            "icon": "fa fa-tachometer",
+                            "icon": "fa fa-tv",
                             "target": "_self"
                         }
                     ]

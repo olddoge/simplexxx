@@ -1,6 +1,9 @@
 <?php
 
-use App\Http\Controllers\Main;
+use App\Http\Controllers\ {
+    Main,
+    ScrapeMovie
+};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::any('/', [Main::class, 'index']);
+
+Route::prefix('scrape')->group(function () {
+    Route::get('/movie', [ScrapeMovie::class, 'index'])->name('scrape_movie');
+});
+
 
 Route::any('/welcome', function () {
     return view('welcome');
