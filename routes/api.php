@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use \App\Http\Controllers\ {
+    Init
+};
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,10 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::any('init', function () {
-    $data = json_decode(file_get_contents(public_path('api/init.json')), true);
-    return response()->json($data);
-});
+Route::any('init', [Init::class, 'menu']);
+
+Route::any('clear', [Init::class, 'clear']);
 
 Route::any('table', function () {
     $data = [
@@ -30,13 +33,11 @@ Route::any('table', function () {
     ];
 //    $data = [];
     $data = [
-        'code' => 0,
-        'data' => $data,
+        'code'  => 0,
+        'data'  => $data,
         'count' => 50
     ];
     return response()->json($data);
 });
 
-Route::any('clear', function () {
-    return response()->json(['code' => 1, 'msg' => '成功']);
-});
+

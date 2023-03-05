@@ -135,8 +135,7 @@
     layui.use(['jquery', 'layer', 'miniAdmin', 'miniTongji'], function () {
         let $ = layui.jquery,
             layer = layui.layer,
-            miniAdmin = layui.miniAdmin,
-            miniTongji = layui.miniTongji;
+            miniAdmin = layui.miniAdmin;
 
         let options = {
             iniUrl: "/api/init",    // 初始化接口
@@ -150,16 +149,6 @@
             maxTabNum: 20,              // 最大的tab打开数量
         };
         miniAdmin.render(options);
-
-        // 百度统计代码，只统计指定域名
-        miniTongji.render({
-            specific: true,
-            domains: [
-                '99php.cn',
-                'layuimini.99php.cn',
-                'layuimini-onepage.99php.cn',
-            ],
-        });
 
         $('.login-out').on("click", function () {
             layer.msg('退出登录成功', function () {

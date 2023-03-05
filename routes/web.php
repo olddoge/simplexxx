@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ {
     Main,
-    ScrapeMovie
+    Files
 };
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::any('/', [Main::class, 'index']);
 
-Route::prefix('scrape')->group(function () {
-    Route::get('/movie', [ScrapeMovie::class, 'index'])->name('scrape_movie');
+Route::prefix('files')->group(function () {
+    Route::get('/index', [Files::class, 'index'])->name('file_list');
+    Route::get('/scan', [Files::class, 'scan'])->name('scan_file');
 });
 
 
