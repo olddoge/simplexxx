@@ -23,8 +23,3 @@ Route::prefix('files')->group(function () {
     Route::get('/index', [Files::class, 'index'])->name('file_list');
     Route::get('/scan', [Files::class, 'scan'])->name('scan_file');
 });
-
-
-Route::any('/welcome', function () {
-    return view('welcome');
-});

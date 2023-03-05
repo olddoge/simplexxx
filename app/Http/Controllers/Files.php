@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 class Files extends Controller
 {
@@ -11,8 +11,12 @@ class Files extends Controller
         return '扫描文件';
     }
 
-    public function index()
+    /**
+     * 文件列表页面
+     * @return View
+     */
+    public function index(): View
     {
-        return '文件首页';
+        return view('files.index');
     }
 }
