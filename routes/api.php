@@ -4,7 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use \App\Http\Controllers\ {
-    Init
+    Init,
+    Files
 };
 
 /*
@@ -24,6 +25,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::any('init', [Init::class, 'menu']);
 Route::any('clear', [Init::class, 'clear']);
+
+Route::prefix('files')->group(function () {
+    Route::get('/list', [Files::class, 'fileList'])->name('api_filelist');    // 文件列表
+});
 
 
 
