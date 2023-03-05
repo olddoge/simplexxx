@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d96234597a2c2c96b7f925e16bc773d8",
+    "content-hash": "ceb607596c7b06aaf93b61d23e0b302f",
     "packages": [
         {
             "name": "brick/math",
@@ -67,6 +67,55 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
+        },
+        {
+            "name": "crysalead/dir",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crysalead/dir.git",
+                "reference": "0390ac74a8f1634b1ec1adffdd118125f1271976"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crysalead/dir/zipball/0390ac74a8f1634b1ec1adffdd118125f1271976",
+                "reference": "0390ac74a8f1634b1ec1adffdd118125f1271976",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "kahlan/kahlan": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lead\\Dir\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Recursive directory scanner to locate directories and/or files in a file system",
+            "keywords": [
+                "Directory Scanner",
+                "directory",
+                "file",
+                "file system"
+            ],
+            "support": {
+                "issues": "https://github.com/crysalead/dir/issues",
+                "source": "https://github.com/crysalead/dir/tree/2.0.4"
+            },
+            "time": "2022-05-17T17:12:17+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
