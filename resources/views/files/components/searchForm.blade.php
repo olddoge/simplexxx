@@ -6,13 +6,13 @@
                 <div class="layui-inline">
                     <label class="layui-form-label" for="filename">文件名/别名</label>
                     <div class="layui-input-inline">
-                        <input type="text" id="filename" class="layui-input">
+                        <input type="text" id="filename" class="layui-input" lay-filter="filename">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label" for="filetype">文件类型</label>
                     <div class="layui-input-inline">
-                        <select id="filetype">
+                        <select id="filetype" lay-filter="filetype">
                             <option value="">请选择</option>
                             <option value="1">视频</option>
                             <option value="1">音乐</option>
@@ -23,7 +23,7 @@
                 <div class="layui-inline">
                     <label class="layui-form-label" for="category">类别</label>
                     <div class="layui-input-inline">
-                        <select id="category">
+                        <select id="category" lay-filter="category">
                             <option value="">请选择</option>
                             <option value="1">◢₄₆ 乃木坂46</option>
                             <option value="2">◢₄₆ 櫻坂46</option>
@@ -35,7 +35,7 @@
                 <div class="layui-inline">
                     <label class="layui-form-label" for="status">状态</label>
                     <div class="layui-input-inline">
-                        <select id="status">
+                        <select id="status" lay-filter="status">
                             <option value="">请选择</option>
                             <option value="1">正常</option>
                             <option value="0">丢失</option>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <button type="button" class="layui-btn layui-btn-primary">
+                    <button type="button" class="layui-btn layui-btn-primary" id="btnSearch">
                         <i class="fa fa-search"></i>
                         搜 索
                     </button>

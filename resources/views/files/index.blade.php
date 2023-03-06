@@ -33,9 +33,22 @@
                 form = layui.form,
                 table = layui.table;
 
+            console.log(form)
+
+            let getSearchParams = function () {
+                return {
+                    name: form.val('filename'),
+                    filetype: form.val('filetype'),
+                    category: form.val('category'),
+                    status: form.val('status')
+                }
+            }
+
+
             table.render({
                 elem: '#fileTable',
                 url: '{{ route('api_filelist') }}',
+                where: getSearchParams(),
                 toolbar: '#toolbar',
                 height: 'full-175',
                 defaultToolbar: ['filter'],
@@ -109,7 +122,6 @@
                         title: '操作',
                         width: 200,
                         templet(data) {
-                            console.log(data)
                             return `<div>
                                 <a class="layui-btn layui-btn-normal layui-btn-xs" title="编辑">
                                     <i class="fa fa-edit"></i>
@@ -128,6 +140,18 @@
                 limit: 25,
                 page: true,
                 skin: 'line'
+            });
+
+
+            $('#btnSearch').click(function () {
+                console.log(getSearchParams())
+                //执行搜索重载
+                table.reload('fileTable', {
+                    page: {
+                        curr: 1
+                    }
+                    , where: getSearchParams()
+                }, 'data');
             });
 
         });
